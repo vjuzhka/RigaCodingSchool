@@ -39,21 +39,35 @@ public class Weather {
 		for (int i = 0; i < daysWeather.length; i++) {
 			sum = sum + daysWeather[i];
 		}
-		
+
 		double average = sum / daysWeather.length;
 
 		return average;
 
 	}
+
 	private double getSum() {
 		double sum = 0;
 		for (int i = 0; i < daysWeather.length; i++) {
 			sum = sum + daysWeather[i];
 		}
-		
+
 		double average = sum / daysWeather.length;
 
 		return average;
-		
+
+	}
+	
+	public int getHottestTemperature() {
+		int max = daysWeather[0];
+		for (int i = 0; i < daysWeather.length; i++) {
+			if (max < daysWeather[i]) {
+				max = daysWeather[i];
 			}
-}
+
+		}
+		return max;
+	}
+		
+	}
+
