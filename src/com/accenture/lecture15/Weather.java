@@ -35,12 +35,7 @@ public class Weather {
 
 	public double getWeekAverage() {
 
-		double sum = 0;
-		for (int i = 0; i < daysWeather.length; i++) {
-			sum = sum + daysWeather[i];
-		}
-
-		double average = sum / daysWeather.length;
+		double average = getSum() / daysWeather.length;
 
 		return average;
 
@@ -52,22 +47,60 @@ public class Weather {
 			sum = sum + daysWeather[i];
 		}
 
-		double average = sum / daysWeather.length;
-
-		return average;
+		return sum;
 
 	}
-	
+
 	public int getHottestTemperature() {
 		int max = daysWeather[0];
 		for (int i = 0; i < daysWeather.length; i++) {
 			if (max < daysWeather[i]) {
 				max = daysWeather[i];
 			}
-
 		}
 		return max;
 	}
-		
-	}
 
+	public String getHottestDayName() {
+
+		int hottestTemperature = daysWeather[0];
+		int hottestDayIndex = 0;
+
+		for (int i = 0; i < daysWeather.length; i++) {
+			if (hottestTemperature < daysWeather[i]) {
+				hottestTemperature = daysWeather[i];
+				hottestDayIndex = i;
+			}
+		}
+		String dayName;
+		switch (hottestDayIndex) {
+		case 0:
+			dayName = "Monday";
+			break;
+		case 1:
+			dayName = "Tuesday";
+			break;
+		case 2:
+			dayName = "Wednesday";
+			break;
+		case 3:
+			dayName = "Thursday";
+			break;
+		case 4:
+			dayName = "Friday";
+			break;
+		case 5:
+			dayName = "Saturday";
+			break;
+		case 6:
+			dayName = "Sunday";
+			break;
+		default: 
+			dayName = "Invalid day"; 
+            break; 
+		}
+
+		return dayName;
+
+	}
+}

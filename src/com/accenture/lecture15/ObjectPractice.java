@@ -45,8 +45,8 @@ public class ObjectPractice {
 		// Task 8 - Create a method in class Weather which will return highest
 		// temperature
 		// Output: Highest temperature in Latvia will be 6
-		System.out.println("Highest temperature in Latvia will be " +
-		latvia.getHottestTemperature());
+		System.out.println("Highest temperature in Latvia will be "
+				+ latvia.getHottestTemperature());
 
 		// Task 9 - Create a method in class Weather which will return hottest
 		// day name, lets assume:
@@ -54,8 +54,8 @@ public class ObjectPractice {
 		// - there will be 7 days forecasts only
 		// Use switch statement in order to solve it
 		// Output: Hottest day in Latvia will be Friday
-		// System.out.println("Hottest day in Latvia will be" +
-		// latvia.getHottestDayName());
+		System.out.println("Hottest day in Latvia will be " +
+		latvia.getHottestDayName());
 
 		// Task 10 - Create a method in class Weather which will return highest
 		// temperature
