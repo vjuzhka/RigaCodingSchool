@@ -95,12 +95,28 @@ public class Weather {
 		case 6:
 			dayName = "Sunday";
 			break;
-		default: 
-			dayName = "Invalid day"; 
-            break; 
+		default:
+			dayName = "Invalid day";
+			break;
 		}
 
 		return dayName;
 
 	}
+
+public int getColdestTemperature() {
+			int min = daysWeather[0];
+		for (int i = 0; i < daysWeather.length; i++) {
+			if (daysWeather[i] < daysWeather[0]) {
+				min = daysWeather[i];
+			}
+		}
+		return min;
+	}
+
+	
 }
+
+
+
+
