@@ -66,8 +66,8 @@ public class ObjectPractice {
 		// Task 11 - Create a method in class Weather which will return coldest
 		// day name:
 		// Output: Hottest day in Latvia will be Monday
-		// System.out.println("Hottest day in Latvia will be" +
-		// latvia.getColdestDayName());
+		System.out.println("Hottest day in Latvia will be" +
+	 latvia.getColdestDayName());
 
 		// Task 12 - User wants to get advanced information printed out into
 		// console about weather in specific country
